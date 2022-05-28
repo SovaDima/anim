@@ -1,0 +1,166 @@
+html {
+    background-color: #F5F5F5;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.logo img {
+    max-width: 200px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 20px;
+}
+
+nav ul {
+    display: flex;
+
+}
+
+nav li {
+    padding: 0 15px;
+    list-style: none;
+}
+.karty{
+    padding-top: 50px;
+}
+.span{
+    animation-name: firstcube;
+    animation-duration: 7s;
+    animation-delay: 2s;
+    animation-direction: alternate-reverse;
+}
+span:hover{
+    transform: perspective(30px);
+    transform:rotate(45deg);
+    transition: linear all 2s;
+    
+}
+nav a {
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium',
+        'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+
+nav li:first-child:hover {
+    transform: rotate(360deg);
+    transition: linear all 0.5s;
+}
+
+nav li:nth-child(2):hover {
+    transform: translate(15px, 15px);
+    transition: ease-in all 0.5s;
+}
+
+nav li:nth-child(3):hover {
+    perspective: 300px;
+    transform: skew(15deg);
+}
+nav li:last-child:hover{
+    transform: scale(1,2);
+}
+
+h1,h2,h3,h4{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+     'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-size: 68px;
+     margin: 0;
+     color:red;
+     animation-name: all;
+    
+}
+
+h1{
+    animation-name: h1;
+    animation-duration: 6s;
+}
+h2{
+    animation-name: h2;
+    animation-duration: 5s;
+}
+h3{
+    animation-name: h3;
+    animation-duration: 5s;
+}
+h4{
+    animation-name: last;
+    animation-duration: 5s;
+}
+ 
+main{
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    justify-content: center;
+    background-color: green;
+    perspective: 400px;
+}
+.span{
+    background-color: red;
+    width: 150px;
+    height: 150px;
+    padding: 15px;
+}
+@keyframes firstcube{
+    0%{
+         
+    }
+    50%{
+        transform: scale(2);
+    }
+    100%{
+        transform: skew(15deg);
+    }
+}
+@keyframes h3{
+    0%{
+        padding-right: -400px;
+    }
+    50%{
+        transform: rotate(360deg);
+        transform: skew(180deg);
+        perspective: 100px;
+        transition: cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+}
+@keyframes last{
+    0%{
+        padding-left: 500px;
+    }
+    100%{
+        transform: rotate(360deg);
+        transform: skew(180deg);
+        perspective: 400px;
+        transition: cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+     
+}@keyframes h1{
+    0%{
+        padding-top: 500px;
+    }
+    100%{
+        transform: rotate(360deg);
+        transform: skew(180deg);
+        perspective: 400px;
+        transition: cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+}
+@keyframes h2{
+    0%{
+        padding-bottom: 500px;
+    }
+    100%{
+        transform: rotate(360deg);
+        transform: skew(180deg);
+        perspective: 400px;
+        transition: cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+}
+ 
